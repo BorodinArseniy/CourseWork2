@@ -2,8 +2,8 @@ package TASK1;
 
 import java.time.LocalDateTime;
 
-public class Weekly_Task extends Task implements Repeatable {
-    public Weekly_Task(String title, Type taskType, LocalDateTime firstTime) {
+public class WeeklyTask extends Task implements Repeatable {
+    public WeeklyTask(String title, Type taskType, LocalDateTime firstTime) {
         super(title, taskType, firstTime);
     }
 

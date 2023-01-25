@@ -1,6 +1,5 @@
 package TASK1;
 
-import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -51,27 +50,27 @@ public class Calendar {
     private static Repeatable createTask(int occurance, String title, Type type, LocalDateTime localDateTime) throws RuntimeException {
         return switch (occurance) {
             case 0 -> {
-                Oncely_Task oncely_task = new Oncely_Task(title, type, localDateTime);
+                OncelyTask oncely_task = new OncelyTask(title, type, localDateTime);
                 tasks.put(oncely_task.getId(), oncely_task);
                 yield oncely_task;
             }
             case 1 -> {
-                Daily_Task daily_task = new Daily_Task(title, type, localDateTime);
+                DailyTask daily_task = new DailyTask(title, type, localDateTime);
                 tasks.put(daily_task.getId(), daily_task);
                 yield daily_task;
             }
             case 2 -> {
-                Weekly_Task weekly_task = new Weekly_Task(title, type, localDateTime);
+                WeeklyTask weekly_task = new WeeklyTask(title, type, localDateTime);
                 tasks.put(weekly_task.getId(), weekly_task);
                 yield weekly_task;
             }
             case 3 -> {
-                Monthly_Task monthly_task = new Monthly_Task(title, type, localDateTime);
+                MonthlyTask monthly_task = new MonthlyTask(title, type, localDateTime);
                 tasks.put(monthly_task.getId(), monthly_task);
                 yield monthly_task;
             }
             case 4 -> {
-                Yearly_Task yearly_task = new Yearly_Task(title, type, localDateTime);
+                YearlyTask yearly_task = new YearlyTask(title, type, localDateTime);
                 tasks.put(yearly_task.getId(), yearly_task);
                 yield yearly_task;
             }

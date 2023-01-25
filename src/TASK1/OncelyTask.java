@@ -2,10 +2,10 @@ package TASK1;
 
 import java.time.LocalDateTime;
 
-public class Oncely_Task extends Task implements Repeatable {
+public class OncelyTask extends Task implements Repeatable {
 
 
-    public Oncely_Task(String title, Type taskType, LocalDateTime date) {
+    public OncelyTask(String title, Type taskType, LocalDateTime date) {
         super(title, taskType, date);
     }
 
@@ -21,7 +21,7 @@ public class Oncely_Task extends Task implements Repeatable {
 
     @Override
     public boolean checkOccurance(LocalDateTime requestedDate) {
-        return getFirstTime().getYear() == requestedDate.getYear();
+        return getFirstTime().equals(requestedDate);
     }
 
 }

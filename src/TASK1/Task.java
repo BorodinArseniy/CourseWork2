@@ -64,18 +64,6 @@ public class Task {
         this.date = firstTime;
     }
 
-    public static Integer getCounter() {
-        return counter;
-    }
-
-    public static void setCounter(Integer counter) {
-        Task.counter = counter;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

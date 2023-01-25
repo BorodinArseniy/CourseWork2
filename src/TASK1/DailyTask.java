@@ -2,8 +2,8 @@ package TASK1;
 
 import java.time.LocalDateTime;
 
-public class Daily_Task extends Task implements Repeatable {
-    public Daily_Task(String title, Type taskType, LocalDateTime firstTime) {
+public class DailyTask extends Task implements Repeatable {
+    public DailyTask(String title, Type taskType, LocalDateTime firstTime) {
         super(title, taskType, firstTime);
     }
 
@@ -20,6 +20,6 @@ public class Daily_Task extends Task implements Repeatable {
 
     @Override
     public boolean checkOccurance(LocalDateTime requestedDate) {
-        return getFirstTime().toLocalDate().equals(requestedDate.toLocalDate());
+        return true;
     }
 }
